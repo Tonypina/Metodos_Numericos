@@ -15,12 +15,12 @@
 #include "stdio.h"
 #include "math.h"
 
-// Estructura para manejar intervalos
-typedef struct inter{
-    double a;
-    double b;
-}inter;
+// Define una enumeración para hacer más intuitivo los extremos del intervalo.
+enum {a, b};
+#define INTERVAL_TAM 2
 
-double biseccion( double (*f)(double), inter intervalo, double antSol, double err );
+double biseccion( double (*f)(double), double* inter, double antSol, double err );
+double regla_falsa( double (*f)(double), double* inter, double antSol, double err );
+
 
 #endif   /* ----- #ifndef METODOS_INC  ----- */
