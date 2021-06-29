@@ -72,3 +72,29 @@ double regla_falsa( double (*f)(double), double* inter, double antSol, double er
         return -1;
     }
 }
+
+//Método Newton - Raphson
+double newton_raphson( double (*f)(double), double (*g)(double), double(*h)(double), double* inter, double antSol, double err ){
+
+    if( !antSol ){
+        antSol = (inter[a] + inter[b])/2;
+    }
+
+    double fi = f(antSol); // Valor de la función
+    double gi = g(antSol); // Valor de la primera derivada
+    double hi = h(antSol); // Valor de la segunda derivada
+
+    // Criterio de convergencia
+    if( fabs( (fi*hi)/pow(gi, 2) ) < 1 ){
+
+        double sol = antSol - ( fi/gi );
+
+        if( fabs(sol - antSol) > err ){
+            sol = newton_raphson( f, g, h, inter, sol, err );
+        }
+        return sol;
+    
+    } else {
+        return -1;
+    }
+}

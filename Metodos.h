@@ -21,6 +21,7 @@ enum {a, b};
 
 double biseccion( double (*f)(double), double* inter, double antSol, double err );
 double regla_falsa( double (*f)(double), double* inter, double antSol, double err );
+double newton_raphson( double (*f)(double), double (*g)(double), double (*h)(double), double* inter, double antSol, double err );
 
 
 #endif   /* ----- #ifndef METODOS_INC  ----- */
