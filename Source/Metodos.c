@@ -11,7 +11,15 @@
 
 #include "Metodos.h"
 
-// Método de bisección
+/**
+ * @brief Método de bisección
+ * 
+ * @param f función f(x) a resolver
+ * @param inter Referencia del intervalo a trabajar
+ * @param antSol Aproximación de la iteración anterior
+ * @param err Porcentaje de error en forma decimal
+ * @return Aproximación de la raíz de f(x)
+ */
 double biseccion( double (*f)(double), double* inter, double antSol, double err ){
 
     double f1 = f(inter[a]);
@@ -42,7 +50,15 @@ double biseccion( double (*f)(double), double* inter, double antSol, double err 
     }
 }
 
-// Método de regla falsa
+/**
+ * @brief Método de Regla Falsa
+ * 
+ * @param f Función f(x) a resolver
+ * @param inter Referencia del intervalo a trabajar
+ * @param antSol Aproximación de la iteración anterior
+ * @param err Porcetaje de error en forma decimal
+ * @return Aproximación de la raíz de f(x)
+ */
 double regla_falsa( double (*f)(double), double* inter, double antSol, double err ){
     
     double f1 = f(inter[a]);
@@ -73,7 +89,17 @@ double regla_falsa( double (*f)(double), double* inter, double antSol, double er
     }
 }
 
-//Método Newton - Raphson
+/**
+ * @brief Método de Newton - Raphson
+ * 
+ * @param f Función f(x) a resolver
+ * @param g Primera derivada de f(x)
+ * @param h Segunda derivada de f(x)
+ * @param inter Referncia del intervalo a trabajar
+ * @param antSol Aproximación de la iteración anterior
+ * @param err Porcentaje de error en forma decimal
+ * @return Aproximación de la raíz de f(x)
+ */
 double newton_raphson( double (*f)(double), double (*g)(double), double(*h)(double), double* inter, double antSol, double err ){
 
     if( !antSol ){

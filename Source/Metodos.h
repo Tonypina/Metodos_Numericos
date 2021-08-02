@@ -13,11 +13,12 @@
 #define  METODOS_INC
 
 #include "stdio.h"
+#include "stdlib.h"
 #include "math.h"
 
 // Define una enumeración para hacer más intuitivo los extremos del intervalo.
 enum {a, b};
-#define INTERVAL_TAM 2
+#define INTERVAL_TAM 2      // Define el tamaño del arreglo para hacer una tupla.
 
 double biseccion( double (*f)(double), double* inter, double antSol, double err );
 double regla_falsa( double (*f)(double), double* inter, double antSol, double err );
