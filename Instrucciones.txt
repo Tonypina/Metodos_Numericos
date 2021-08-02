@@ -1,13 +1,13 @@
 
-INSTRUCCIÓN DE COMPILACIÓN:
-
-    $ gcc -Wall -std=c99 -o main main.c Metodos.c
-
-INSTRUCCIÓN PARA EJECUTAR:
-
-Linux y MAC:
-    $ ./main
-
-Windows:
-    $ main.exe
+       	    INSTRUCCIONES PARA EJECUTAR
+	
+	*  Dar doble click en el archivo  *
+	*  "Metodos_Numericos" *
     
+		   DESDE CONSOLA
+
+	*  Windows: Metodos_Numericos.exe *
+	
+	*  Linux: ./Metodos_Numericos     *
+	
+	
